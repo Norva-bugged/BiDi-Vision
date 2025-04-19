@@ -1,0 +1,107 @@
+name: Bug Report
+description: Let us know about a problem in BiDi Vision
+labels: ["bug", "triage needed"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We're so grateful for your help in making BiDi Vision better! If something's not working right, please share what you've noticed. Even a little information goes a long way. Don't worry if you're not sure about all the details, we'll work together to sort it out. To avoid duplicates, please check if someone else has reported this issue
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What Went Wrong?
+      description: Tell us about the issue in your own words. What did you expect to happen, and what happened instead?
+      placeholder: |
+        Example: I opened the BiDi Vision web interface, but the list of tests on the left side was empty. I expected to see my test names listed there
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: How Can We Recreate It?
+      description: Share the steps you took when the problem happened. Include things like buttons you clicked or commands you ran. If you have a screenshot or short video, that's super helpful! Approximate steps are okay if you're not sure
+      placeholder: |
+        Example:
+        1. I opened a terminal and ran a setup command (like `npm install`)
+        2. I started the tool with a command
+        3. I went to `http://localhost:8080` in my browser
+        4. I looked at the left side of the page and saw no tests listed
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: What's Your Setup?
+      description: Let us know what kind of computer and browser you're using. If you know extra details like the Node.js version or which testing tool (e.g., WebdriverIO, Selenium, Nightwatch), include those too. Not sure? Just share what you know! You can check Node.js with `node -v` in your terminal
+      placeholder: |
+        Example:
+        - Computer: MacBook with macOS Ventura
+        - Browser: Firefox (latest version)
+        - Node.js: 18.12.0 (type `node -v` to check)
+        - Testing Tool: WebdriverIO
+        - BiDi Vision Version: Latest from GitHub
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Where Did the Problem Happen?
+      description: Pick the part of BiDi Vision you think is affected. If you're not sure, choose “Not Sure,” and we'll figure it out together
+      options:
+        - Web Interface (The visual part you see in the browser, like the test list or network logs)
+        - Testing Tools (Using WebdriverIO, Selenium, or Nightwatch with BiDi Vision)
+        - Core System (The behind-the-scenes logic, like managing test sessions)
+        - Reports (The test results or logs)
+        - Tests (The automated tests for BiDi Vision itself)
+        - Deployment (Running BiDi Vision with Docker or CI/CD)
+        - Browsers (Issues specific to Chrome, Firefox, or other browsers)
+        - Not Sure
+      default: 7
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Any Screenshots, Videos, or Logs?
+      description: If you have images, videos, or error messages, add them here to show the issue. You can drag and drop files or paste text from your browser console or terminal
+      placeholder: |
+        Example:
+        - [Add a screenshot of the empty test list]
+        - Error message: `Uncaught TypeError: Cannot read property 'tests' of undefined`
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Anything Else to Share?
+      description: Add any extra details, like other issues this might be related to or ways you've tried to fix it
+      placeholder: |
+        Example: This might be similar to issue #123. Restarting the tool sometimes helps
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Quick Check
+      description: Thanks for taking a moment to confirm these steps, it really helps us get started!
+      options:
+        - label: I've checked for similar issues to make sure this isn't a duplicate
+          required: true
+        - label: I've shared the steps I took when the problem happened
+          required: true
+        - label: I've included some details about my setup (even if not everything)
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        You're amazing for helping us improve BiDi Vision! We'll review your report soon and may reach out for more details. Stay awesome!

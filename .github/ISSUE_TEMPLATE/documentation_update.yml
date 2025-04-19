@@ -1,0 +1,74 @@
+name: Documentation Update
+description: Suggest improvements or additions to BiDi Vision's documentation
+labels: ["documentation", "triage needed"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We're so excited you're helping improve BiDi Vision's documentation! Whether it's fixing something unclear or adding new content, your ideas make a big difference. Please share what you've noticed in your own words, even a small suggestion helps! To avoid duplicates, please check if someone else has reported this documentation need
+
+  - type: textarea
+    id: doc-description
+    attributes:
+      label: What's Missing or Unclear?
+      description: Tell us about the documentation problem or what new information we should add. It could be unclear instructions, a missing section, or something else
+      placeholder: |
+        Example: The instructions don't explain how to start BiDi Vision with Nightwatch for beginners
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-changes
+    attributes:
+      label: What Should We Add or Fix?
+      description: Suggest what we should change or include to make the documentation better. A general idea is perfect, or you can be specific if you'd like!
+      placeholder: |
+        Example: Add a step-by-step guide for setting up Nightwatch, explaining how to install the plugin and run the `--ui` command
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: What Part of BiDi Vision Does This Cover?
+      description: Choose the area of the project this documentation relates to. If you're not sure, pick “Not Sure,” and we'll help sort it out
+      options:
+        - Web Interface (The visual part you see in the browser, like the test list or network logs)
+        - Testing Tools (Using WebdriverIO, Selenium, or Nightwatch with BiDi Vision)
+        - Core System (The behind-the-scenes logic, like managing test sessions)
+        - Reports (The test results or logs)
+        - Tests (The automated tests for BiDi Vision itself)
+        - Deployment (Running BiDi Vision with Docker or CI/CD)
+        - Browsers (Information specific to Chrome, Firefox, or other browsers)
+        - Not Sure
+      default: 7
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Anything Else to Share?
+      description: Add any extra details, like who this documentation would help or related suggestions
+      placeholder: |
+        Example: This would really help new users trying to get started with Nightwatch
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Quick Check
+      description: Thanks for taking a moment to confirm these steps, it really helps us get started!
+      options:
+        - label: I've checked for similar documentation suggestions to make sure this isn't a duplicate
+          required: true
+        - label: I've shared what I'd like to see changed or added
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        You're amazing for helping make BiDi Vision's documentation better! We'll review your suggestion soon and may reach out to chat more. Keep those awesome ideas coming!

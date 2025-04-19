@@ -1,0 +1,84 @@
+name: Test Case Request
+description: Suggest a new test case to improve BiDi Vision's testing
+labels: ["enhancement", "testing", "triage needed"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We're so grateful you're helping strengthen BiDi Vision's tests! Your ideas for new test cases make our project more reliable. **Before you start, kindly check if a similar test already exists** in our test files or open issues, this helps us avoid duplicates and keeps things running smoothly. Share your suggestion in your own words, even a simple idea helps! If you're unsure, we'll guide you
+
+  - type: textarea
+    id: test-description
+    attributes:
+      label: What Test Should We Add?
+      description: Describe the test case you're suggesting. What should it check, and why is it important? 
+      placeholder: |
+        Example: A test to check that the Test Sidebar correctly shows test names when running WebdriverIO with the `--ui` flag. I checked `ui/src/__tests__/TestSidebar.test.js` and didn't find this test
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Why Is This Test Helpful?
+      description: Tell us how this test would improve BiDi Vision or catch potential issues. A short explanation is perfect!
+      placeholder: |
+        Example: This would ensure the Test Sidebar works reliably, helping users debug their tests without missing any test names
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: What Part of BiDi Vision Does This Test Cover?
+      description: Choose the area of the project this test relates to. If you're not sure, pick “Not Sure,” and we'll help sort it out
+      options:
+        - Web Interface (The visual part you see in the browser, like the test list or network logs)
+        - Testing Tools (Using WebdriverIO, Selenium, or Nightwatch with BiDi Vision)
+        - Core System (The behind-the-scenes logic, like managing test sessions)
+        - Reports (The test results or logs)
+        - Tests (The automated tests for BiDi Vision itself)
+        - Deployment (Running BiDi Vision with Docker or CI/CD)
+        - Browsers (Tests specific to Chrome, Firefox, or other browsers)
+        - Not Sure
+      default: 7
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-implementation
+    attributes:
+      label: Any Ideas on How to Write the Test?
+      description: If you have thoughts on how this test could be created, share them here. It's okay to skip this if you're not sure!
+      placeholder: |
+        Example: Write a test in `ui/src/__tests__/TestSidebar.test.js` that runs a WebdriverIO test suite and checks the Test Sidebar's HTML for test names
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Anything Else to Share?
+      description: Add any extra details, like related bugs, features, or why this test is needed
+      placeholder: |
+        Example: This test would help catch issues like #109, where the sidebar caused errors
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Quick Check
+      description: Thanks for taking a moment to confirm these steps, it really helps us get started!
+      options:
+        - label: I've checked **test files and issues** to ensure this test case isn't already covered
+          required: true
+        - label: I've explained why this test would be helpful
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        You're awesome for helping make BiDi Vision's tests better! We'll review your suggestion soon and may reach out to chat more. Keep those great ideas coming!

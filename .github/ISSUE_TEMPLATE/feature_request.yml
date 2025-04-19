@@ -1,0 +1,94 @@
+name: Feature Request
+description: Share an idea to improve BiDi Vision
+labels: ["enhancement", "triage needed"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We're thrilled you're sharing your ideas to make BiDi Vision even better! Please tell us about your suggestion, it doesn't need to be technical, just let us know what you'd love to see. If you're not sure about all the details, that's okay! We'll work with you to bring your idea to life. To avoid duplicates, please check if someone else has suggested this feature
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: What's Your Idea?
+      description: Describe the feature you'd like to see in your own words. What would it do, and why is it exciting?
+      placeholder: |
+        Example: I'd love a button in the web interface to save a screenshot of the test results with one click
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Why Would This Help?
+      description: Tell us how this feature would make your work easier or improve BiDi Vision. A short explanation is perfect!
+      placeholder: |
+        Example: This would save time when I need to share test results with my team, instead of manually capturing screenshots
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Where Would This Feature Fit?
+      description: Choose the part of BiDi Vision this idea relates to. If you're not sure, pick “Not Sure,” and we'll help sort it out
+      options:
+        - Web Interface (The visual part you see in the browser, like the test list or network logs)
+        - Testing Tools (Using WebdriverIO, Selenium, or Nightwatch with BiDi Vision)
+        - Core System (The behind-the-scenes logic, like managing test sessions)
+        - Reports (The test results or logs)
+        - Tests (The automated tests for BiDi Vision itself)
+        - Deployment (Running BiDi Vision with Docker or CI/CD)
+        - Browsers (Features specific to Chrome, Firefox, or other browsers)
+        - Not Sure
+      default: 7
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Any Ideas on How to Make It Happen?
+      description: If you have thoughts on how this feature could work, share them here. It's okay to skip this if you're not sure!
+      placeholder: |
+        Example: Maybe add a “Save Screenshot” button next to the test results that downloads an image
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Other Ways You've Tried?
+      description: If you've found workarounds or other ways to achieve this, let us know. Feel free to skip if not applicable
+      placeholder: |
+        Example: Right now, I take screenshots manually, but it's slow and tedious
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Anything Else to Share?
+      description: Add any extra details, like related ideas or features this depends on
+      placeholder: |
+        Example: This might work well with a feature to share reports, like in issue #456
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Quick Check
+      description: Thanks for taking a moment to confirm these steps, it really helps us get started!
+      options:
+        - label: I've checked for similar feature requests to make sure this isn't a duplicate
+          required: true
+        - label: I've explained why this feature would be helpful
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        You're awesome for sharing your ideas with BiDi Vision! We'll take a look at your suggestion soon and may reach out to chat more. Keep those great ideas coming!
